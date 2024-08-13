@@ -14,7 +14,7 @@ rm jadx-1.3.0.zip
 sudo ln -s $(pwd)/bin/jadx /usr/local/bin/jadx
 sudo ln -s $(pwd)/bin/jadx-gui /usr/local/bin/jadx-gui
 
-STEP 3: Cài đặt SDK
+STEP 3: Install SDK
 mkdir -p $HOME/Android/Sdk/cmdline-tools/latest
 cd $HOME/Android/Sdk/cmdline-tools/latest
 wget https://dl.google.com/android/repository/commandlinetools-linux-9477386_latest.zip -O commandlinetools.zip
@@ -32,14 +32,14 @@ export PATH=$PATH:$ANDROID_HOME/build-tools/34.0.0
 source ~/.bashrc
 sdkmanager --sdk_root=$ANDROID_HOME "build-tools;34.0.0"
 
-STEP 4: Chạy file requirment.sh trong folder code_static
+STEP 4: Run the file requirement.sh inside folder code_static
 ./requirement.sh
 
-STEP 5: Tạo folder uploads ở trong folder server_final
+STEP 5: Create a directory called "uploads" inside the folder "server_final"
 cd server_final
 mkdir uploads
 
-STEP 6: Chạy server apache2, nodejs, và file monitor.sh
+STEP 6: Run file server apache2, nodejs, and file monitor.sh
 sudo systemctl start apache2
-node server.js trong folder server
-./monitor.sh trong folder scan
+node server.js (inside directory "server")
+./monitor.sh (inside directory "scan")
