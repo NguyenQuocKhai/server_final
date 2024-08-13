@@ -1,9 +1,9 @@
-Bước 1: Download and Activate Virtual Environment
+STEP 1: Download and Activate Virtual Environment
 sudo apt-get install -y python3-venv
 python3 -m venv /home/venv
 source /home/venv/bin/activate
 
-Bước 2: Cài đặt jadx và java
+STEP 2: Install, setup jadx and java
 sudo apt-get install -y openjdk-17-jdk
 Download jadx 1.3.0 ở https://github.com/skylot/jadx/releases?page=2
 mkdir jadx
@@ -14,7 +14,7 @@ rm jadx-1.3.0.zip
 sudo ln -s $(pwd)/bin/jadx /usr/local/bin/jadx
 sudo ln -s $(pwd)/bin/jadx-gui /usr/local/bin/jadx-gui
 
-Bước 3: Cài đặt SDK
+STEP 3: Cài đặt SDK
 mkdir -p $HOME/Android/Sdk/cmdline-tools/latest
 cd $HOME/Android/Sdk/cmdline-tools/latest
 wget https://dl.google.com/android/repository/commandlinetools-linux-9477386_latest.zip -O commandlinetools.zip
@@ -32,14 +32,14 @@ export PATH=$PATH:$ANDROID_HOME/build-tools/34.0.0
 source ~/.bashrc
 sdkmanager --sdk_root=$ANDROID_HOME "build-tools;34.0.0"
 
-Bước 4: Chạy file requirment.sh trong folder code_static
+STEP 4: Chạy file requirment.sh trong folder code_static
 ./requirement.sh
 
-Bước 5: Tạo folder uploads ở trong folder server_final
+STEP 5: Tạo folder uploads ở trong folder server_final
 cd server_final
 mkdir uploads
 
-Bước 6: Chạy server apache2, nodejs, và file monitor.sh
+STEP 6: Chạy server apache2, nodejs, và file monitor.sh
 sudo systemctl start apache2
 node server.js trong folder server
 ./monitor.sh trong folder scan
